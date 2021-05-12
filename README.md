@@ -1,2 +1,2 @@
 # trybe-exercises
-Trybe projects
+All course exercises will be listed here
