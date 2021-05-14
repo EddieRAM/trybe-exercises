@@ -1,0 +1,30 @@
+h1 {
+  font-size: 60px; color: orange;
+  font-family: sans-serif; text-decoration:wheat;
+  
+}
+
+ul {
+  background-color: green; text-align: left; 
+}
+
+#pul {
+  background-color: gray;
+}
+
+p {
+  font-weight: 600; font-size: 36px; font-style: unset;
+  }
+
+body {
+  font-size: 16px; 
+}
+#y {color: yellow;
+
+}
+#r {color: rgb(255, 0, 0);
+
+}
+#br {color: brown;
+
+}
