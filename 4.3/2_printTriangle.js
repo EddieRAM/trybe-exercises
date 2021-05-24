@@ -1,14 +1,13 @@
 //O código deverá imprimir um asterísco uma vez na primeira linha;
 //Duas vezes na segunda, três na terceira... até a 5 linha.
 
-let printTriangle = [];
+let n = 5
+let printTriangle = ''; 
 
-for (let index = 0; index < 5; index += 1) {
-  printTriangle.push("*");
-  console.log(printTriangle);  
+for (let index = 0; index < n; index += 1) {
+  printTriangle += '*'
+  console.log(printTriangle);
 }
-
-
 
 // A array "printTriangle" vazia é criada para receber "*";
 // Variável "index" recebe valor de 0 a 5;
