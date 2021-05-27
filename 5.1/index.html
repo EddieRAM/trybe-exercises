@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        
+        //Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+
+          function changeText(text) {
+            document.getElementsByTagName("p")[0].innerHTML = text;
+          }
+          changeText("Trabalhando desde casa em um lugar bonito com minha esposa e filho(a, os, as)");
+    
+        //Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+
+          function sideSquaresColor(color) {
+            document.getElementsByClassName("main-content")[0].style.backgroundColor = color;
+          }
+          sideSquaresColor("rgb(76, 164, 109");
+
+        //Crie uma função que mude a cor do quadrado vermelho para branco.
+
+          function centerSquareColor(color) {
+            document.getElementsByClassName("center-content")[0].style.backgroundColor = color;
+          }
+          centerSquareColor("white");
+
+        //Crie uma função que corrija o texto da tag <h1>.
+
+          function titleText(text) {
+            document.getElementsByClassName("title")[0].innerText = (text);
+          }
+          titleText("Java Escripter");
+
+        //Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+
+          function shiftCase(text) {
+            for (let index = 0; index < document.getElementsByTagName(text).length; index += 1) {
+              document.getElementsByTagName(text)[index].innerHTML = document.getElementsByTagName(text)[index].innerHTML.toUpperCase();
+            }
+          }
+          shiftCase("p")
+
+        // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+          function showTag(tag) {
+            for (let index = 0; index < document.getElementsByTagName(tag).length; index += 1) {
+              console.log(document.getElementsByTagName(tag)[index].innerHTML);
+            }          
+          }
+          showTag("p")
+        
+    </script>
+  </body>
+</html>
