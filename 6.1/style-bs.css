@@ -1,0 +1,11 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  margin: 25px auto;
+}
+
+.btn {
+  margin-right: 10px;
+}
