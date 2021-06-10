@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BT">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Currículo</title>
+</head>
+<body>
+  <header class = "curr"><h1>Currículo</h1></header>
+<fieldset>
+  <legend>Dados Pessoais</legend>
+  <form action="" method="GET">
+    <div class = "line-content">
+    <label for="full-name">Nome:</label>
+    <input type="text" id="full-name" placeholder="Seu nome" maxlength="40" required>
+    </div>
+    <div class = "line-content">
+    <label for="user-email">e-mail:</label>
+    <input type="text" id="user-email-" placeholder="Seu e-mail" maxlength="50" required>
+    </div>
+    <div class = "line-content">
+      <label for="user-cpf">CPF:</label>
+      <input type="text" id="user-cpf-" placeholder="Seu CPF" maxlength="11" required>
+    </div>
+    <div class = "line-content">
+      <label for="user-adress">Endereço:</label>
+      <input type="text" id="user-adress-" placeholder="Seu Endereço" maxlength="200" required>
+    </div>
+    <div class = "line-content">
+      <label for="user-state">Estado:</label>
+      <select type="text" id="user-state" name="state" required></select>      
+    </div>
+    <div class = "line-content">
+      <label for="user-city">Cidade:</label>
+      <input type="text" id="user-city-" placeholder="Sua Cidade" maxlength="28" required>
+    </div>
+    <div class = "user-place">Tipo de Moradia:
+        <br><br>    
+        <label for="place-apartment">Apartamento</label>
+        <input type="radio" value="place-apartment" name="place" id="place-apartment" required>
+        <label for="place-house">Casa</label>  
+        <input type="radio" value="place-house" name="place" id="place-house" required>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class = "line-content">
+      <legend>Dados do Seu Último Emprego</legend>
+      <label for="user-resume">Resumo do Currículo</label>
+      <textArea type="text" name="resume" id="user-resume" maxlength="1000" cols="60"
+      rows="5" required></textArea>      
+    </div>
+    <div class = "line-content">
+      <label for="user-role">Cargo:</label>
+      <input type="text" name="role" id="user-role" maxlength="40" required>
+    </div>
+    <div class = "line-content">
+      <label for="user-role-description">Descrição do Cargo:</label>
+      <textArea type="text" name="role-description" id="user-resume" maxlength="500" 
+      cols= "60" rows= "5" required></textArea>
+    </div>    
+  </fieldset>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
