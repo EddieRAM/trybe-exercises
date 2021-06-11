@@ -1,4 +1,4 @@
-const state = document.getElementById('user-state');
+let state = document.getElementById('user-state');
 const allStates = [
   ['Acre', 'AC'],
   ['Alagoas', 'AL'],

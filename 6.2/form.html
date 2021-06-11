@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha284-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>Currículo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>  
-  <header class = "container text-center"><h1 class = "display-1 text-muted">Currículo</h1></header>
-  <fieldset>
-  <hr>
+  <header>
+    <div class="container" id="nav-container">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <a href="" class="navbar-brand">
+        <img id="logo" src="https://mir-s3-cdn-cf.behance.net/user/115/283dd23556171.5574baf96ad03.jpg" alt="Logo Eduardo Sá Carneiro"> Projeto - Form Currículo
+      </a>
+      <button class="navbar-toggler" type="button" data-toggler="collapse" data-targer="#navbar-links" 
+      aria-controls="navbar-links" aria-expanded="false" aria-label="toggle navigator">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      </nav>
+    </div>
+  </header>
+  <fieldset>  
   <form action="" method="GET">
     <legend class="lead">Dados Pessoais</legend>
     <div class ="container mb-2">
@@ -56,29 +70,31 @@
     <legend class="lead">Dados do Seu Último Emprego</legend>
       <div class="container mb-2">
         <label class="form-label" for="user-resume">Resumo do Currículo</label>
-        <textArea type="text" name="resume" id="user-resume" maxlength="1000" cols="60"
+        <textArea class="form-control" type="text" name="resume" id="user-resume" maxlength="1000" cols="60"
         rows="5" required></textArea>      
       </div>
       <div class="container mb-2">
         <label class="form-label" for="user-role">Cargo:</label>
-        <input type="text" name="role" id="user-role" maxlength="40" required>
+        <input class="form-control" type="text" name="role" id="user-role" maxlength="40" required>
       </div>
       <div class="container mb-2">
         <label class="form-label" for="user-role-description">Descrição do Cargo:</label>
-        <textArea type="text" name="role-description" id="user-resume" maxlength="500" 
+        <textArea class="form-control" type="text" name="role-description" id="user-resume" maxlength="500" 
         cols= "60" rows= "5" required></textArea>
       </div> 
       <div class="container mb-2">
         <label class="form-label" for="start-date">Data de Início</label>
-        <input type="date" id= "start-date" required>
+        <input class="form-control" type="date" id= "start-date" required>
       </div>
       <br>
       <section class="container">      
-        <button type="submit" id="submit-form">Enviar</button>
-        <button type="reset" id="clean-form">Limpar</button>      
+        <button class="main-btn" type="submit" id="submit-form">Enviar</button>
+        <button class="main-btn" type="reset" id="clean-form">Limpar</button>      
       </section>    
     </form>
-  </fieldset>  
-  <script> src="script.js"</script>
+  </fieldset>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f3bc05a147.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script> 
 </body>
 </html>

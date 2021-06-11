@@ -1,0 +1,63 @@
+body {
+  margin-top: 7%;
+  font-family: "Roboto Medium", sans-serif;  
+  background-color: rgb(199, 199, 199);
+}
+.row {
+  margin:0;
+}
+
+.container {
+  padding: 15px 0;
+}
+
+.navbar {  
+  background-color: white;
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#logo {
+  width: 50px;
+}
+
+.navbar-brand {
+  margin-left: 40%;
+  padding: 0;
+  color: gray;  
+}
+
+.navbar-brand:hover {
+  color: gray;
+}
+
+.navbar-expand-g .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+}
+
+.lead {
+  text-align: left;
+  margin-left: 15%;
+}
+
+.main-btn {
+  background-color: white;
+  text-transform: uppercase;
+  width: 120px;
+  height: 50px;
+  padding: 10px 20px;
+  margin: 3%;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: .5s;
+}
+
+.main-btn:hover {
+  text-decoration: none;
+  color: gray;
+  background-color: transparent;
+  border-color: black
+}
