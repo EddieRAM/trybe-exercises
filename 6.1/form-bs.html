@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style-bs.css">
+  <title>Currículo</title>  
+</head>
+<body>
+  <header class = "text-center"><h1 class= "text-muted display-1">Currículo</h1></header>
+  <hr>
+<fieldset>
+  <legend class = "lead">Dados Pessoais</legend class = "lead">
+  <form action="" method="GET">
+    <div class = "form-group container">
+    <label class= "form-label" for="full-name">Nome:</label class= "form-label">
+    <input class= "form-control" type="text" id="full-name" placeholder="Seu nome" maxlength="40" required>
+    </div>
+    <div class = "form-group container">
+    <label class= "form-label" for="user-email">e-mail:</label class= "form-label">
+    <input class= "form-control" type="text" id="user-email-" placeholder="Seu e-mail" maxlength="50" required>
+    </div>
+    <div class = "form-group container">
+      <label class= "form-label" for="user-cpf">CPF:</label class= "form-label">
+      <input class= "form-control" type="text" id="user-cpf-" placeholder="Seu CPF" maxlength="11" required>
+    </div>
+    <div class = "form-group container">
+      <label class= "form-label" for="user-adress">Endereço:</label class= "form-label">
+      <input class= "form-control" type="text" id="user-adress-" placeholder="Seu Endereço" maxlength="200" required>
+    </div>    
+    <div class = "form-group container">
+      <label class= "form-label" for="user-state">Estado:</label class= "form-label">
+      <select class= "form-select" type="text" id="user-state" name="state" required></select>      
+    </div>
+    <div class = "form-group container">
+      <label class= "form-label" for="user-city">Cidade:</label class= "form-label">
+      <input class= "form-control" type="text" id="user-city-" placeholder="Sua Cidade" maxlength="28" required>
+    </div>
+    <br>
+    <div class = "mt-0 form-check">Tipo de Moradia:
+        <br><br>    
+        <label class= "form-check-label" for="place-apartment">Apartamento</label class= "form-label">
+        <input class= "form-check-input" type="radio" value="place-apartment" name="place" id="place-apartment" required>
+    </div>
+    <div class = "mt-0 form-check">
+        <label class= "form-check-label" for="place-house">Casa</label class= "form-label">  
+        <input class= "form-check-input" type="radio" value="place-house" name="place" id="place-house" required>
+    </div>
+    <hr>
+  </fieldset>
+  <fieldset>
+    <div class = "container">
+      <legend class = "lead">Dados do Seu Último Emprego</legend class = "lead">
+      <label class= "form-label" for="user-resume">Resumo do Currículo</label class= "form-label">
+      <textArea class= "form-control" type="text" name="resume" id="user-resume" maxlength="1000" cols="60"
+      rows="5" required></textArea class= "form-control">      
+    </div>
+    <div class = "form-group container">
+      <label class= "form-label" for="user-role">Cargo:</label class= "form-label">
+      <input class= "form-control" type="text" name="role" id="user-role" maxlength="40" required>
+    </div>
+    <div class = "form-group container">
+      <label class= "form-label" for="user-role-description">Descrição do Cargo:</label class= "form-label">
+      <textArea class= "form-control" type="text" name="role-description" id="user-resume" maxlength="500" 
+      cols= "60" rows= "5" required></textArea class= "form-control">
+    </div>
+    <div class = "form-group container">
+      <label class= "form-label" for="start-date">Data de Início</label class= "form-label">
+      <input class= "form-control" type="date" id= "start-date" required>
+    </div>
+    <br>
+    <section class = "form-group container">      
+      <button class = "btn btn-success" type="submit" id="submit-form">Enviar</button>
+      <button class = "btn btn-warning" type="reset" id="clean-form">Limpar</button>      
+    </section>    
+  </fieldset>
+</form>
+<script src="js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
