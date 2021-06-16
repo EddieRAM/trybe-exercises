@@ -1,0 +1,62 @@
+* {
+  font-size: 16px;
+  margin: 20px 10px;
+}
+
+body {  
+
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+img {
+  margin-left: 0px;  
+  max-width: 100%;  
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+figure {
+    margin: 0;
+}
+
+@media screen and (min-width: 540px) and (max-width: 699px){
+  *{
+    font-size: 18px;
+    margin: 20px 20px;
+    background-color: rgb(205, 214, 196);
+    max-width: 500px;
+  }
+
+  h1{
+    
+  }
+
+  img {
+    
+    
+  }
+  
+}
+
+@media screen and (min-width: 700px) {
+  *{
+    font-size: 20px;
+    margin: 20px 30px;
+    background-color: rgb(156, 209, 104);
+    max-width: 1000px;    
+  }
+  
+  img {
+    display: flex;
+    align-self: center;
+    margin-left: 5%;     
+  }
+}
