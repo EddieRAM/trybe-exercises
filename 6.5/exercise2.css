@@ -1,7 +1,152 @@
-html {
-  box-sizing: border-box;
+/* Serão criadas variações de layout para tamanhos de tela com base nos
+principais modelos mobile, além da versão para PC 
+
+1- O modelo principal terá o tamanho máximo de 540px. de largura de tela.
+2- O segundo modelo terá o tamho máximo de 768px.
+3- O terceiro será o dos dispositivos com largura de tela superior a 768px. */
+
+/* Começando com Iphone 5/SE (320px) */
+
+html {  
+  display: flex;
+  flex-flow: row wrap;  
+  background-image: url('KS0oyC.png'); 
+  justify-content: center; 
+  margin: 10px;  
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-  background-color: lemonchiffon;
+
+body {  
+  background-color: rgba(255, 250, 205, 0.486);  
 }
+
+*, *:before, *:after {  
+  font-family: Libre Baskerville; 
+  box-sizing: inherit;  
+  margin: 20px 5px; 
+  font-size: 12px;  
+}
+
+header p { 
+  justify-content: center;
+  margin-top: 80px;
+  text-align: center;
+  font-size: 30px;  
+}
+
+nav {
+  display: flex; 
+  justify-content: space-around;
+  align-content: center;
+  text-decoration: underline;    
+}
+
+nav ul{ 
+  display: flex;
+  flex-flow: row wrap;  
+  justify-content: center; 
+  margin: 0;
+  padding: 0;
+  list-style-type: none;   
+}
+
+nav ul li {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  padding: 14px; 
+  font-size: 12px;    
+}
+
+
+h1 { 
+  margin: 40px;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 18px;
+}
+
+h2 {
+  margin: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+aside ul li {
+  margin: 15px;
+  margin-left: 0px;
+  margin-right: 40px;
+  text-align: center;
+  list-style-type: none; 
+}
+
+li {  
+  list-style-type: none;
+}
+
+/* Surface Duo (540px) */
+
+@media screen and (min-width: 540px) and (max-width: 767px) {
+
+  html {  
+    display: flex;
+    flex-flow: column wrap;
+    
+    background-image: url('KS0oyC.png');   
+  }
+  
+  body {
+    margin-right: 50px;
+    background-color: rgba(255, 250, 205, 0.486);  
+  }
+  
+  *, *:before, *:after {  
+    font-family: Libre Baskerville; 
+    box-sizing: inherit;  
+    margin: 20px 10px;   
+  }
+  
+  header { 
+    font-size: 40px;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+    
+  }
+  
+  nav {
+    display: flex; 
+    justify-content: space-evenly;
+    align-content: center;
+    text-decoration: underline;  
+  }
+  
+  nav ul{ 
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 20px;
+    justify-content: center; 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;   
+  }
+  
+  nav ul li {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    padding: 14px;  
+  }
+  
+  
+  h1 {
+    margin: 60px;
+    margin-top: 120px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 40px;
+    text-align: center;
+  }  
+}
+
