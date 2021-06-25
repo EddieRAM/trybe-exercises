@@ -112,8 +112,8 @@ const expectedResult = [
 
 function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
-  const sortYear = books.sort(function (a, b) {
-    return b.releaseYear - a.releaseYear;
+  const sortYear = books.sort(function (a, b) { // Aqui foi chamada a função dentro do sort que compara dois objetos, retornando -1, 1 ou 0;
+    return b.releaseYear - a.releaseYear; // dois quais, apenas o releaseYear será contado.
   })
   return sortYear;
 }
