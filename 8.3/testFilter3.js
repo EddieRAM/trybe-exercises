@@ -8,7 +8,7 @@ const newListStudents = removeStudentByName('Ricardo', arrayMyStudents);
 console.log(newListStudents); // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
  */
 
-/* const removeRicardo = arrayMyStudents.filter(person => person !== 'Ricardo');
+const removeRicardo = arrayMyStudents.filter(person => person !== 'Ricardo');
 console.log(removeRicardo);
- */
+
 
