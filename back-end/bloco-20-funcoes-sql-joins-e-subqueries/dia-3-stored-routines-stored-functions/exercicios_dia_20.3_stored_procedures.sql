@@ -42,21 +42,42 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS ShowFilmWithString;
 
-CREATE PROCEDURE ShowFilmWithString(IN syllable VARCHAR(100))
+CREATE PROCEDURE ShowFilmWithString(IN category VARCHAR(100))
 BEGIN
     SELECT f.film_id, f.title, fc.category_id, c.`name` AS category_name FROM sakila.film f
     INNER JOIN sakila.film_category fc
     ON f.film_id = fc.film_id
     INNER JOIN sakila.category c
     ON fc.category_id = c.category_id
-    WHERE `name` LIKE CONCAT('%', syllable, '%');
+    WHERE `name` LIKE category;
 END $$
 
 DELIMITER ;
 
 -- Como usar:
 
-CALL ShowFilmWithString('ion');
+CALL ShowFilmWithString('action');
 
 # 3. Monte uma procedure que receba o email de um cliente como parâmetro de entrada e diga se o cliente
 --  está ou não ativo, através de um parâmetro de saída.
+SELECT * FROM sakila.customer;
+
+USE sakila;
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS IsCustomerActive;
+
+CREATE PROCEDURE IsCustomerActive(
+IN customer_email VARCHAR(300),
+OUT customer_status VARCHAR(300))
+BEGIN
+	SELECT IF(`active` = 1, 'active', 'inactive')  FROM sakila.customer 
+    WHERE email LIKE customer_email
+    INTO customer_status;    
+END $$
+    
+DELIMITER ;
+
+CALL IsCustomerActive('SANDRA.MARTIN@sakilacustomer.org', @customer_status);
+SELECT @customer_status AS customer_status;
+    
