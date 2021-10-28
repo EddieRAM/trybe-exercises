@@ -52,8 +52,8 @@ CREATE TABLE IF NOT EXISTS cadastros (
     funcionario_id INT NOT NULL,
     FOREIGN KEY (funcionario_id)
         REFERENCES funcionarios (funcionario_id),
-    data_cadastro TIMESTAMP NOT NULL,
-    hora_cadastro TIMESTAMP
+    data_cadastro VARCHAR(50) NOT NULL,
+    hora_cadastro VARCHAR(50)
 );
 
 INSERT INTO funcionarios(nome, sobrenome)
@@ -69,7 +69,7 @@ VALUES('Administração'),
 ('Estratégico'),
 ('Marketing');
 
-DROP TABLE IF EXISTS funcionarios_setores;
+DROP TABLE IF EXISTS cadastros;
 
 INSERT INTO funcionarios_setores(funcionario_id, setor_id) VALUES(1, 1),
 (1, 2),
@@ -82,3 +82,8 @@ INSERT INTO contatos(funcionario_id, email, telefone) VALUES (1, 'jo@gmail.com',
 (2, 'andre1990@gmail.com', '(47)99522-4996'),
 (3, 'cindy@outlook.com', '(33)99855-4669'),
 (4, 'fernandamendes@yahoo.com', '(33)99200-1556');
+
+INSERT INTO cadastros(funcionario_id, data_cadastro, hora_cadastro) VALUES (1, '2020-05-05', '08:50:25' ),
+(2, '2020-05-05',''),
+(3, '2020-05-05','10:55:35'),
+(4, '2020-05-05','11:45:40');
