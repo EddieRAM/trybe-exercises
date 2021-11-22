@@ -56,3 +56,37 @@ db.movies.updateOne( { title: "Batman"}, { $pop: { category: 1 } } );
 //  Batman , garantindo que esse valor não se duplique.
 
 db.movies.updateOne( { title: "Batman" }, { $addToSet: {  category: "action" } });
+
+//  7. Exercício 7: Adicione a categoria "90's" aos filmes Batman e Home Alone .
+
+db.movies.updateMany({ title: { $in: ["Batman", "Home Alone"] } }, { $push: { category: "90's" } });
+
+//  8. Exercício 8: Crie um array de documentos chamado cast para o filme Home Alone com os 
+// seguintes dados:
+
+/*
+{
+  "actor": "Macaulay Culkin",
+  "character": "Kevin"
+},
+{
+  "actor": "Joe Pesci",
+  "character": "Harry"
+},
+{
+  "actor": "Daniel Stern"
+}
+*/
+
+db.movies.updateOne({ title: "Home Alone" }, { $push: { cast: { $each: [ {
+  "actor": "Macaulay Culkin",
+  "character": "Kevin"
+},
+{
+  "actor": "Joe Pesci",
+  "character": "Harry"
+},
+{
+  "actor": "Daniel Stern"
+} ]} } });
+
