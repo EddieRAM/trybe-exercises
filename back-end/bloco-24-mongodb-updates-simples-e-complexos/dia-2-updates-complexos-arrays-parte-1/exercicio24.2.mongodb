@@ -47,3 +47,12 @@ db.movies.updateOne({ title: "Batman" }, { $pull: { category:  "action" } });
 // 4. Exercício 4: Remova o primeiro elemento do array category do filme Batman .
 
 db.movies.updateOne( { title: "Batman"}, { $pop: { category: -1 } } );
+
+// 5.  Exercício 5: Remova o último elemento do array category do filme Batman .
+
+db.movies.updateOne( { title: "Batman"}, { $pop: { category: 1 } } );
+
+//  6. Exercício 6: Adicione o elemento "action" ao array category do filme
+//  Batman , garantindo que esse valor não se duplique.
+
+db.movies.updateOne( { title: "Batman" }, { $addToSet: {  category: "action" } });
