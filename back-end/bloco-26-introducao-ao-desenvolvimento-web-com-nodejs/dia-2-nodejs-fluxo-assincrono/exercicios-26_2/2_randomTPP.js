@@ -34,13 +34,16 @@ function pamParam(num1, num2, num3) {
   .then(resolve => console.log(resolve))
   .catch(error => console.log(error)); */
 
-  const random =  Math.floor(Math.random() * 100 + 1);
+  const randomNumber =  Math.floor(Math.random() * 100 + 1);
 
 
-function callPamParam () {
-  const random = Array.from({ length: 3 }).map(getRandomNumber);    
-}
 
-pamParam(random, random, random)
+/* 
+pamParam(2, 2, randomNumber)
+.then(result => console.log(result))
+.catch(error => console.log(error)); */
+
+pamParam(randomNumber, randomNumber, randomNumber)
 .then(result => console.log(result))
 .catch(error => console.log(error));
+
