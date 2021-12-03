@@ -16,22 +16,16 @@ Descreva todos os testes que serão feitos utilizando its ;
 Crie as asserções validando se os retornos de cada cenário tem o tipo
  e o valor esperado. */
 
-function whichNumberSign(n) {
-  if ( n > 0 ) {
-    result = 'POSITIVE'
-    console.log(result)
-    return;
+module.exports = (n) => {
+  if ( n > 0 ) {  
+    return 'POSITIVE';
   }
 
   if ( n < 0 ) {
-    result = 'NEGATIVE'
-    console.log(result)
-    return;
+    return 'NEGATIVE';
+    
   } else {  
-    result = 'NEUTER'
-    console.log(result)
-    return;
-  }
-}
 
-module.exports = whichNumberSign;
+    return 'NEUTER';
+  }
+};
