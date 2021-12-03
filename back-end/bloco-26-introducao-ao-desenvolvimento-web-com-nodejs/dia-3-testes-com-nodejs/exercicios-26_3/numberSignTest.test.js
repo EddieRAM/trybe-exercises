@@ -3,20 +3,21 @@ const { expect } = require('chai');
 const whichNumberSign = require('./numberSign');
 
 describe('if the number is positive, negative or neuter' , () => {
+  const result = whichNumberSign(n);
   describe('if the number is positive', () => {
-    const result = whichNumberSign();
-
-    it('must be higher than 0', () => {
-      expect(result).to.be.above(0);
-    });
-
-    it('must be lower than 0', () => {
-      expect(result).to.be.below(0);
-    });
-
-    it('must be equal 0', () => {
-      expect(result).to.be.equal(0);
-    });
+    it('must return POSITIVE', () => {
+      expect(result).to.be('POSITIVE');
+    });    
   });
+  describe('if the number is negative', () => {
+    it('must return NEGATIVE', () => {
+      expect(result).to.be('NEGATIVE');
+    }); 
+  });
+  describe('if the number is neuter', () => {
+    it('must return NEUTER', () => {
+      expect(result).to.be('NEUTER');
+    }); 
+  })
 });
 
