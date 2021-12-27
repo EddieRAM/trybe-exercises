@@ -5,8 +5,6 @@ O script deve ser executado através do comando npm run sorteio .
 
 Utilize o readline-sync para realizar input de dados.
 
-Armazene o script em sorteio.js.
-
 
 O número gerado deve ser um inteiro entre 0 e 10.
 
@@ -20,7 +18,7 @@ Caso a pessoa erre o número, exiba na tela "Opa, não foi dessa vez. O número 
 
 const readline = require('readline-sync');
 
-function createGuessGame () {
+function guessingGame () {
 
   const userNumber = readline.questionInt('Insert any number between 0 and 10');
 
@@ -33,15 +31,17 @@ function createGuessGame () {
 
   if (userNumber !== gameResult) {
     console.log(`And the result is... ${gameResult}. You didn't guess the number`);
-    console.log('Wanna try again?'); 
+    if (readline.keyInYN('Wanna try again?')) {
+      guessingGame();
+    } else {
+      console.log('Thank you for playing!')
+    }
+    }; 
     return;   
-  }
-
-  const yesOrNo = readline.question('y/n');
-  
-  if (yesOrNo !== 'y') return console.log('Thank you for playing!');    
-  
-
-  createGuessGame();
 }
-createGuessGame();
+
+guessingGame();
+
+module.exports = {
+  guessingGame
+}

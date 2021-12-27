@@ -1,4 +1,4 @@
-/* 5 Agora temos um problema: peso não é um número inteiro! Isso quer dizer que
+/* 2 Agora temos um problema: peso não é um número inteiro! Isso quer dizer que
  precisamos mudar um pouco a forma como solicitamos o input desse dado.
 O pacote readline-sync possui uma função específica para tratar esses casos.
 
@@ -9,7 +9,7 @@ Encontrou a função? Show! Agora utilize-a para solicitar o input de peso .*/
 
 const readline = require('readline-sync');
 
-function calculateIMC () {
+function calculateInputIMCFloat () {
   const weight = readline.questionFloat('What is your weight in kg?'); 
   const height = readline.questionInt('What is your height in cm?');
   
@@ -18,4 +18,8 @@ function calculateIMC () {
   console.log(`Your IMC is ${IMC}`);
 }
 
-calculateIMC();
+calculateInputIMCFloat();
+
+module.exports = {
+  calculateInputIMCFloat
+}

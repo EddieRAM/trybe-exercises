@@ -1,6 +1,9 @@
-/* 5 Vamos sofisticar um pouco mais nosso script. Além de imprimir o IMC na tela, imprima também em qual categoria da tabela abaixo aquele IMC se enquadra:
+/* 3 Vamos sofisticar um pouco mais nosso script. Além de imprimir o IMC na tela,
+imprima também em qual categoria da tabela abaixo aquele IMC se enquadra:
+
 Considere a seguinte tabela para classificar a situação do IMC:
-Copiar
+
+
 | IMC                                       | Situação                  |
 | ----------------------------------------- | ------------------------- |
 | Abaixo de 18,5                            | Abaixo do peso (magreza)  |
@@ -12,7 +15,7 @@ Copiar
 
 const readline = require('readline-sync');
 
-function calculateIMC () {
+function calculateCatIMC () {
   const weight = readline.questionFloat('What is your weight in kg?');
   const height = readline.question('What is your height in cm?');
 
@@ -48,4 +51,9 @@ function calculateIMC () {
   console.log('Situação: Obesidade graus III e IV');
 }
 
-calculateIMC();
+
+calculateCatIMC();
+
+module.exports = {
+  calculateCatIMC
+}

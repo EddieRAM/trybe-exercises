@@ -1,6 +1,6 @@
 /* 6 Vamos criar mais um script. Dessa vez, para calcular a velocidade média de um carro numa corrida.
 
-A fórmula para calcular velocidade média é distância / tempo. Armazene o script no arquivo velocidade.js.
+A fórmula para calcular velocidade média é distância / tempo.
 
 Agora, permita que o script seja executado através do comando npm run velocidade . Para isso, crie a
  chave velocidade dentro do objeto scripts no package.json.
@@ -19,7 +19,13 @@ function calculateAvgSpeed () {
 
   const avgSpeed = space / time;
 
-  console.log( `The average speed is ${avgSpeed}m/s`);
+  const avgSpeedKmPH = avgSpeed * (36 / 10);
+
+  console.log( `The average speed is ${avgSpeed}m/s or ${avgSpeedKmPH}km/h`);
 }
 
 calculateAvgSpeed();
+
+module.exports = {
+  calculateAvgSpeed
+}
