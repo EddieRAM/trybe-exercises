@@ -15,10 +15,7 @@ function getFactorial(userNumber) {
   userNumber = readline.questionInt('Insert a positive integer number');
   const userInput = userNumber;
   let factorial = userNumber;
-  if (userNumber !== Number.isInteger) {
-    console.log('Please, insert an integer number');
-    return;
-  }
+ 
   if (userNumber < 0) {
     console.log(`Please, insert a number above 0`);
     return;
@@ -35,3 +32,7 @@ function getFactorial(userNumber) {
 }
 
 getFactorial();
+
+module.exports = {
+  getFactorial
+}

@@ -12,7 +12,7 @@ Você pode utilizar o require para executar o script em questão. */
 const readline = require('readline-sync');
 
 function chooseScript() {
-  const whichScript = readline.question('Which script should I run? (imc/imc-question/imc-float/imc-cat/velocidade/sorteio)');
+  const whichScript = readline.question('Which script should I run? (imc/imc-question/imc-float/imc-cat/velocidade/sorteio/fatorial/fibonacci)');
   
   if (whichScript === 'imc') {
     const { calculateIMC } = require('./1_imc');
@@ -37,6 +37,14 @@ function chooseScript() {
   if (whichScript === 'sorteio') {
     const { guessingGame } = require('./7_guess-game');
     guessingGame
+  }
+  if (whichScript === 'fatorial') {
+    const { getFactorial } = require('./b1_fatorial');
+    getFactorial
+  }
+  if (whichScript === 'fibonacci') {
+    const { firstFibonacci } = require('./b2_fibonacci');
+    firstFibonacci
   }
 
 }
