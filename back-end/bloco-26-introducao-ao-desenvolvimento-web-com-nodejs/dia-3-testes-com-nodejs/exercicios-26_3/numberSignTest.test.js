@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+//1, 2
+
 const { expect } = require('chai');
 
 const whichNumberSign = require('./numberSign');
@@ -44,4 +47,17 @@ describe('runs function numberSign', () => {
 
 });
 
+//3
 
+describe('when parameter is not a number', () => {
+  describe('the result', () => {
+    it('is a string', () => {
+      const result = whichNumberSign('ablubleblé')
+      expect(result).to.be.a('string');
+    });
+    it('must return a warning', () => {
+      const result = whichNumberSign('ablubleblé')
+      expect(result).to.be.equals('The parameter must be a number')
+    });
+  });
+});
