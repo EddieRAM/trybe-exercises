@@ -31,6 +31,6 @@ function numberSign (n) {
   return result;
 };
 
-numberSign(1);
+numberSign(-2);
 
 module.exports = numberSign;
